@@ -10,6 +10,7 @@ struct Roots:Decodable {
     var products: [Product]
     
 }
+
 struct Product:Decodable {
     var id: Int
     var title: String

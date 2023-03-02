@@ -11,11 +11,19 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var productCollectionView: UICollectionView!
    
+    @IBAction func switchDataSource(_ sender: UISwitch) {
+        if sender.isOn {
+            productViewModel.getProductsFromDb()
+        } else {
+            productViewModel.fetchApi(url: "https://dummyjson.com/products", methodOfHttp: "GET")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         productViewModel.protocolProductData = self  // link with sender
         
-        productViewModel.fetchApi(url: "https://dummyjson.com/products", methodOfHttp: "GET")
+        productViewModel.getProductsFromDb()
       // productViewModel.populateProducts()
         
         let nib = UINib(nibName: "ProductCollectionViewCell", bundle: nil)
@@ -42,7 +50,14 @@ extension ViewController :  UICollectionViewDelegate, UICollectionViewDataSource
         
     }
   
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("item selected at row \(indexPath.row)")
+
+        let productDetailsViewController = (self.storyboard?.instantiateViewController(withIdentifier: "ProductDetailsViewController") as? ProductDetailsViewController)!
+
+        productDetailsViewController.product = productViewModel.productArray[indexPath.row]
+        self.navigationController?.pushViewController(productDetailsViewController, animated: true)
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let height = view.frame.size.height * 0.25
