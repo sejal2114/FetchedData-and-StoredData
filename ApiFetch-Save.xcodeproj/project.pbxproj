@@ -18,6 +18,7 @@
 		06890E8229B0A738003B8E11 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06890E8029B0A738003B8E11 /* ProductCollectionViewCell.swift */; };
 		06890E8329B0A738003B8E11 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06890E8129B0A738003B8E11 /* ProductCollectionViewCell.xib */; };
 		06890E8629B0ADA3003B8E11 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 06890E8529B0ADA3003B8E11 /* SDWebImage */; };
+		06890E8829B0F227003B8E11 /* ProtocolProductData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06890E8729B0F227003B8E11 /* ProtocolProductData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		06890E7E29B0A6FD003B8E11 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		06890E8029B0A738003B8E11 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		06890E8129B0A738003B8E11 /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		06890E8729B0F227003B8E11 /* ProtocolProductData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolProductData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				06890E7629B0A099003B8E11 /* Info.plist */,
 				06890E8029B0A738003B8E11 /* ProductCollectionViewCell.swift */,
 				06890E8129B0A738003B8E11 /* ProductCollectionViewCell.xib */,
+				06890E8729B0F227003B8E11 /* ProtocolProductData.swift */,
 			);
 			path = "ApiFetch-Save";
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			files = (
 				06890E6D29B0A097003B8E11 /* ViewController.swift in Sources */,
 				06890E7D29B0A67A003B8E11 /* ProductViewModel.swift in Sources */,
+				06890E8829B0F227003B8E11 /* ProtocolProductData.swift in Sources */,
 				06890E7F29B0A6FD003B8E11 /* Products.swift in Sources */,
 				06890E8229B0A738003B8E11 /* ProductCollectionViewCell.swift in Sources */,
 				06890E6929B0A097003B8E11 /* AppDelegate.swift in Sources */,

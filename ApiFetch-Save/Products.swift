@@ -7,7 +7,7 @@
 
 import Foundation
 struct Roots:Decodable {
-    var product: [Product]
+    var products: [Product]
     
 }
 struct Product:Decodable {

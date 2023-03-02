@@ -17,19 +17,19 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLM-TZ-LC9">
-                        <rect key="frame" x="0.0" y="10" width="60" height="21"/>
+                        <rect key="frame" x="0.0" y="10" width="244" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSV-Yv-zeA">
-                        <rect key="frame" x="0.0" y="41" width="28.666666666666668" height="21"/>
+                        <rect key="frame" x="0.0" y="41" width="244" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gh3-C7-J46">
-                        <rect key="frame" x="0.0" y="72" width="42" height="21"/>
+                        <rect key="frame" x="0.0" y="72" width="244" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -40,12 +40,15 @@
             <color key="backgroundColor" red="0.19252625107765198" green="0.92074078321456909" blue="0.90962773561477661" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="lLM-TZ-LC9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1Vi-ta-qgW"/>
+                <constraint firstAttribute="trailing" secondItem="Gh3-C7-J46" secondAttribute="trailing" constant="10" id="GwV-FW-htt"/>
                 <constraint firstItem="gSV-Yv-zeA" firstAttribute="top" secondItem="lLM-TZ-LC9" secondAttribute="bottom" constant="10" id="NVm-ZK-cWF"/>
                 <constraint firstItem="gSV-Yv-zeA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="NWz-qJ-Xyy"/>
                 <constraint firstItem="Gh3-C7-J46" firstAttribute="top" secondItem="gSV-Yv-zeA" secondAttribute="bottom" constant="10" id="Q8b-tP-lHZ"/>
                 <constraint firstItem="Gh3-C7-J46" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SZd-9t-s6H"/>
+                <constraint firstAttribute="trailing" secondItem="lLM-TZ-LC9" secondAttribute="trailing" constant="10" id="aYA-Ik-8Rd"/>
                 <constraint firstAttribute="bottom" secondItem="Gh3-C7-J46" secondAttribute="bottom" constant="20" id="fTd-X4-6uk"/>
                 <constraint firstItem="lLM-TZ-LC9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="tKo-cH-gVq"/>
+                <constraint firstAttribute="trailing" secondItem="gSV-Yv-zeA" secondAttribute="trailing" constant="10" id="vy0-OJ-Odf"/>
             </constraints>
             <size key="customSize" width="250" height="85"/>
             <connections>

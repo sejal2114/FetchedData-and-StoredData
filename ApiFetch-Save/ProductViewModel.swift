@@ -9,6 +9,7 @@ import Foundation
 import SQLite3
 class ProductViewModel {
     var productArray: [Product] = []
+    var protocolProductData: ProtocolProductData?    //protocolreference 
     
     func populateProducts(){
         let product1 = Product(id: 1, title: "sej", description: "gsh", price: 12, discountPercentage: 12.1, rating: 12.2, stock: 11, brand: "mac", thumbnail: "sejalal")
@@ -18,6 +19,10 @@ class ProductViewModel {
         productArray.append(product2)
         productArray.append(product3)
         print(productArray)
+    }
+    
+    func getProductsFromDb(){
+        
     }
 
     func fetchApi(url:String, methodOfHttp:String){
@@ -37,8 +42,16 @@ class ProductViewModel {
               return
             }
             print(String(data: responseData, encoding: .utf8)!)
+             
+            let decoder = JSONDecoder()
+            let root:Roots = try!decoder.decode(Roots.self, from: responseData)
+            self.productArray = root.products
+            self.protocolProductData?.reloadView()
             
         }
         dataTask.resume()
     }
-}
+    
+
+    }
+

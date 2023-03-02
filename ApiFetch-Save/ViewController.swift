@@ -13,21 +13,21 @@ class ViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //productViewModel.fetchApi(url: "https://dummyjson.com/products", methodOfHttp: "GET")
-       productViewModel.populateProducts()
+        productViewModel.protocolProductData = self  // link with sender
+        
+        productViewModel.fetchApi(url: "https://dummyjson.com/products", methodOfHttp: "GET")
+      // productViewModel.populateProducts()
         
         let nib = UINib(nibName: "ProductCollectionViewCell", bundle: nil)
         productCollectionView.register(nib, forCellWithReuseIdentifier: "ProductCollectionViewCell")
     
         productCollectionView.delegate = self
         productCollectionView.dataSource = self
-       
-        productCollectionView.reloadData()
     }
 
 }
 
-extension ViewController :  UICollectionViewDelegate, UICollectionViewDataSource {
+extension ViewController :  UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         productViewModel.productArray.count
     }
@@ -41,5 +41,22 @@ extension ViewController :  UICollectionViewDelegate, UICollectionViewDataSource
         return cell
         
     }
+  
     
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let height = view.frame.size.height * 0.25
+        let width = view.frame.size.width * 0.30
+        return CGSize(width: width, height: height)
+    }
+    
+    
+}
+
+extension ViewController: ProtocolProductData {
+    func reloadView() {
+            DispatchQueue.main.async {
+            self.productCollectionView.reloadData()
+        }
+    }
 }
