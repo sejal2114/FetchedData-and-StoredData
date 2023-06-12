@@ -48,7 +48,8 @@ class ProductViewModel {
             let decoder = JSONDecoder()
             let root:Roots = try!decoder.decode(Roots.self, from: responseData) // decoding responce data wicha are coming from webservice n converting into specific typ i.e.Roots and storing in variable root
             
-            self.productArray = root.products //
+            self.productArray = root.products//
+            
             self.protocolProductData?.reloadView()
             
         }
